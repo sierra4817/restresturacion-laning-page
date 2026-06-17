@@ -1,59 +1,200 @@
-/* Estilo CSS: Paleta Suiza Premium */
+/* 🎨 MODERN CUSTOM THEME */
 :root {
-    --bg-color: #FFFFFF;        /* Fondo blanco puro */
-    --text-color: #1A1A1A;      /* Gris grafito profundo (autoridad) */
-    --accent-color: #A67C00;    /* Bronce profundo (lujo táctil) */
-    --surface-color: #F9F9F9;   /* Gris muy suave para tarjetas */
-    --footer-text: #666666;     /* Legibilidad sutil */
-    --container-width: 800px;
+  --primary-color: #667eea;
+  --secondary-color: #764ba2;
+  --hover-color: #4b59d7;
+  --background: #f9f9f9;
+  --text-color: #1c1c1c;
+  --secondary-text: #666;
+  --card-color: #fff;
+  --shadow: rgba(0, 0, 0, 0.15);
 }
 
-body { 
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Tipografía más limpia */
-    line-height: 1.8; 
-    color: var(--text-color); 
-    margin: 0; 
-    padding: 0; 
-    background-color: var(--bg-color);
+/* BASE RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.cta-btn { 
-    background-color: var(--text-color); 
-    color: #ffffff; 
-    padding: 18px 40px; 
-    text-decoration: none; 
-    font-size: 1rem;
-    font-weight: 500; /* Menos negrita para un look más refinado */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.4s ease; /* Transición más suave */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.cta-btn:hover { 
-    background-color: var(--accent-color); 
+/* CARD STYLES */
+.card {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.pillar-card { 
-    background: var(--surface-color); /* Usando la variable definida */
-    padding: 30px; 
-    border-left: 2px solid transparent; /* Borde inicial invisible */
-    transition: all 0.3s ease;
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.pillar-card:hover {
-    border-left: 4px solid var(--accent-color);
-    background: #f4f4f4;
+header h1 {
+  font-size: 2.8rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
+  color: var(--text-color);
 }
 
-.author-section { 
-    background: #0A0A0A; /* Negro extremadamente profundo */
-    color: #DDDDDD;     /* Gris platino para el texto */
-    padding: 60px; 
-    margin: 60px 0; 
+header p {
+  font-size: 1.2rem;
+  color: var(--secondary-text);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-footer.legal { 
-    font-size: 0.75rem; 
-    color: var(--footer-text);
-    text-align: justify;
+/* NAVIGATION */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  background: var(--card-color);
+  color: var(--text-color);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid current-color;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+nav a:active {
+  transform: translateY(1px);
+}
+
+/* BUTTON STYLES */
+.btn-primary {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+  outline: none;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(102, 126, 234, 0.6);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* SECTIONS */
+.section {
+  margin: 40px 0;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.section:hover {
+  transform: translateY(-5px);
+}
+
+/* MODES */
+.modes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.mode-card {
+  padding: 20px;
+  border: 2px solid var(--text-color);
+  border-radius: 12px;
+  background: var(--card-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.mode-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .section {
+    padding: 20px 15px;
+  }
 }
