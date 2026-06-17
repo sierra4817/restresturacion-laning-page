@@ -1,38 +1,20 @@
-/* Estilo CSS optimizado para una estética Premium/Suiza */
+/* Estilo CSS: Paleta Suiza Premium */
 :root {
-    --bg-color: #ffffff;
-    --text-color: #1a1a1a;
-    --accent-color: #c5a059; /* Un bronce más sofisticado */
+    --bg-color: #FFFFFF;        /* Fondo blanco puro */
+    --text-color: #1A1A1A;      /* Gris grafito profundo (autoridad) */
+    --accent-color: #A67C00;    /* Bronce profundo (lujo táctil) */
+    --surface-color: #F9F9F9;   /* Gris muy suave para tarjetas */
+    --footer-text: #666666;     /* Legibilidad sutil */
     --container-width: 800px;
 }
 
 body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Tipografía más limpia */
     line-height: 1.8; 
     color: var(--text-color); 
     margin: 0; 
     padding: 0; 
     background-color: var(--bg-color);
-}
-
-.container { 
-    max-width: var(--container-width); 
-    margin: 0 auto; 
-    padding: 80px 20px; 
-}
-
-h1 { 
-    font-size: 2.5rem; 
-    font-weight: 300; 
-    text-transform: uppercase; 
-    letter-spacing: 3px; 
-    margin-bottom: 20px;
-}
-
-.hero p { 
-    font-size: 1.2rem; 
-    color: #555; 
-    margin-bottom: 40px; 
 }
 
 .cta-btn { 
@@ -41,10 +23,10 @@ h1 {
     padding: 18px 40px; 
     text-decoration: none; 
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500; /* Menos negrita para un look más refinado */
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background 0.3s ease;
+    letter-spacing: 2px;
+    transition: all 0.4s ease; /* Transición más suave */
 }
 
 .cta-btn:hover { 
@@ -52,26 +34,26 @@ h1 {
 }
 
 .pillar-card { 
-    background: #fdfdfd; 
+    background: var(--surface-color); /* Usando la variable definida */
     padding: 30px; 
-    border: 1px solid #eee;
-    margin-bottom: 20px;
-    transition: transform 0.2s;
+    border-left: 2px solid transparent; /* Borde inicial invisible */
+    transition: all 0.3s ease;
 }
 
 .pillar-card:hover {
     border-left: 4px solid var(--accent-color);
+    background: #f4f4f4;
 }
 
 .author-section { 
-    background: #111; 
-    color: #eee; 
+    background: #0A0A0A; /* Negro extremadamente profundo */
+    color: #DDDDDD;     /* Gris platino para el texto */
     padding: 60px; 
     margin: 60px 0; 
 }
 
 footer.legal { 
     font-size: 0.75rem; 
-    color: #999; 
+    color: var(--footer-text);
     text-align: justify;
 }
